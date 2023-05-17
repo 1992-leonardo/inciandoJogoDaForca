@@ -1,64 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Landing Page</title>
+  <title>Jogo da Forca</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#features">Recursos</a></li>
-        <li><a href="#contact">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+  <h1>Jogo da Forca</h1>
 
-  <section id="hero">
-    <div class="hero-content">
-      <h1>Bem-vindo à nossa Landing Page</h1>
-      <p>Apresentando o melhor produto ou serviço que temos a oferecer.</p>
-      <a href="#contact" class="cta-button">Entre em contato</a>
-    </div>
-  </section>
+  <div class="hangman">
+    <img src="forca_0.png" alt="Forca" id="hangman-image">
+  </div>
 
-  <section id="about">
-    <div class="about-content">
-      <h2>Sobre nós</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae tincidunt ex. Sed vehicula efficitur nisl id placerat.</p>
-    </div>
-  </section>
+  <div class="word-display">
+    <p id="word">_ _ _ _ _ _ _</p>
+  </div>
 
-  <section id="features">
-    <div class="feature">
-      <h3>Recurso 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-    <div class="feature">
-      <h3>Recurso 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-    <div class="feature">
-      <h3>Recurso 3</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </section>
+  <div class="guesses">
+    <p>Tentativas Restantes: <span id="remaining-guesses">6</span></p>
+    <p>Tentativas Anteriores: <span id="previous-guesses"></span></p>
+  </div>
 
-  <section id="contact">
-    <div class="contact-content">
-      <h2>Entre em contato</h2>
-      <form>
-        <input type="text" name="name" placeholder="Seu nome">
-        <input type="email" name="email" placeholder="Seu e-mail">
-        <textarea name="message" placeholder="Sua mensagem"></textarea>
-        <input type="submit" value="Enviar">
-      </form>
-    </div>
-  </section>
+  <form id="guess-form">
+    <label for="guess">Digite uma letra:</label>
+    <input type="text" id="guess" maxlength="1">
+    <button type="submit">Enviar</button>
+  </form>
 
-  <footer>
-    <p>&copy; 2023 Nome da Empresa. Todos os direitos reservados.</p>
-  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
